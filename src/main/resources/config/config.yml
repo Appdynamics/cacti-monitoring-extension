@@ -1,0 +1,8 @@
+# Cacti RRD particulars
+rrd:
+    rraPath: "/home/satish/AppDynamics/cacti/cacti-0.8.8c/rra"
+    rrdFiles: [localhost_mem_buffers_8.rrd, localhost_hdd_free_13.rrd, localhost_mem_swap_9.rrd, localhost_proc_12.rrd, localhost_users_11.rrd]
+
+#prefix used to show up metrics in AppDynamics
+metricPathPrefix:  "Custom Metrics|Cacti|"
+

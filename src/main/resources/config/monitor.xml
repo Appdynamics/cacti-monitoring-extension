@@ -1,0 +1,23 @@
+<monitor>
+        <name>CactiMonitor</name>
+        <type>managed</type>
+        <description>Cacti monitor</description>
+        <monitor-configuration></monitor-configuration>
+        <monitor-run-task>
+                <execution-style>periodic</execution-style>
+                <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+                <name>Cacti Monitor Run Task</name>
+                <display-name>Cacti Monitor Task</display-name>
+                <description>Cacti Monitor Task</description>
+                <type>java</type>
+                <execution-timeout-in-secs>60</execution-timeout-in-secs>
+                <task-arguments>
+                    <!-- config file-->
+                    <argument name="config-file" is-required="true" default-value="monitors/CactiMonitor/config.yml" />
+		       </task-arguments>
+                <java-task>
+                    <classpath>Cacti-monitoring-extension.jar</classpath>
+                    <impl-class>com.appdynamics.monitors.cacti.CactiMonitor</impl-class>
+                </java-task>
+        </monitor-run-task>
+</monitor>
